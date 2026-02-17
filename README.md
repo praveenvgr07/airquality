@@ -1,133 +1,36 @@
-# Air Quality Monitoring Application
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A full-stack application that displays real-time air quality data from the OpenAQ API on an interactive global map.
+## Getting Started
 
-## 🚀 Quick Start
+First, run the development server:
 
-### Option 1: Start Both Servers Simultaneously (Recommended)
 ```bash
-npm start
-```
-This will start both the backend (port 5000) and frontend (port 3000) servers concurrently.
-
-### Option 2: Start Individual Servers
-
-**Backend only:**
-```bash
-npm run backend
-# or for development with auto-reload:
-npm run dev:backend
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-**Frontend only:**
-```bash
-npm run frontend
-# or for development with auto-reload:
-npm run dev:frontend
-```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 📁 Project Structure
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```
-air-quality-app/
-├── backend/           # Express.js API server
-│   ├── controllers/   # Route controllers
-│   ├── database/      # Database connection
-│   ├── models/        # Mongoose models
-│   ├── routes/        # API routes
-│   ├── services/      # External API services
-│   └── server.js      # Main server file
-├── frontend/          # Next.js frontend
-│   ├── app/           # App router pages
-│   ├── components/    # React components
-│   └── public/        # Static assets
-└── package.json       # Root package with concurrent scripts
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## 🔧 Available Scripts
+## Learn More
 
-- `npm start` - Start both frontend and backend in development mode
-- `npm run dev` - Same as npm start
-- `npm run backend` - Start backend server only
-- `npm run frontend` - Start frontend server only
-- `npm run dev:backend` - Start backend with nodemon (auto-reload)
-- `npm run dev:frontend` - Start frontend with Next.js dev server
+To learn more about Next.js, take a look at the following resources:
 
-## 🌐 Access Points
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:5000
-- **API Endpoints**:
-  - `GET /api/air-quality` - Get air quality data
-  - `GET /api/map/data` - Get map data for visualization
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## 🛠️ Technologies Used
+## Deploy on Vercel
 
-**Backend:**
-- Node.js + Express.js
-- MongoDB + Mongoose
-- Axios for API requests
-- dotenv for environment variables
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-**Frontend:**
-- Next.js 14 (App Router)
-- React 18
-- Leaflet.js for interactive maps
-- react-leaflet for React integration
-
-**External APIs:**
-- OpenAQ API for air quality data
-- OpenWeatherMap API for weather data
-
-## ⚙️ Environment Variables
-
-Create a `.env` file in the `backend/` directory:
-
-```env
-PORT=5000
-MONGO_USERNAME=your_mongodb_username
-MONGO_PASSWORD=your_mongodb_password
-MONGO_CLUSTER=your_mongodb_cluster
-MONGO_DB=airquality
-OPENWEATHER_API_KEY=your_openweather_api_key
-```
-
-## 📊 Features
-
-- Real-time air quality data visualization
-- Interactive global map with pollution markers
-- Automatic data refresh every 5 minutes
-- Detailed location information on click
-- Responsive design for all devices
-- Weather data integration
-- AQI (Air Quality Index) calculations
-
-## 🐛 Troubleshooting
-
-**Common Issues:**
-
-1. **Port already in use**: Kill existing Node processes
-   ```bash
-   taskkill /f /im node.exe
-   ```
-
-2. **Module not found errors**: Reinstall dependencies
-   ```bash
-   cd backend && npm install
-   cd frontend && npm install
-   ```
-
-3. **MongoDB connection issues**: Check your `.env` file credentials
-
-4. **Frontend not starting**: Install Next.js dependencies
-   ```bash
-   cd frontend && npm install next@14.0.0 react@18 react-dom@18 --legacy-peer-deps
-   ```
-
-## 📝 Development Notes
-
-- Backend auto-reloads with nodemon during development
-- Frontend hot-reloads with Next.js dev server
-- API data refreshes automatically every 5 minutes
-- Map markers show real-time AQI values
-- Click on markers for detailed pollutant information
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

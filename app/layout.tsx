@@ -1,0 +1,34 @@
+import type { Metadata } from "next";
+import "./globals.css";
+import Header from "@/components/Header";
+import { LocationProvider } from "@/context/LocationContext";
+
+export const metadata: Metadata = {
+  title: "Air Quality - Professional Environmental Monitoring",
+  description: "Monitor air quality, explore locations with our interactive 3D globe, and discover agriculture opportunities.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossOrigin="" />
+      </head>
+      <body>
+        <LocationProvider>
+          <Header />
+          <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+            {children}
+          </main>
+        </LocationProvider>
+      </body>
+    </html>
+  );
+}

@@ -1,0 +1,227 @@
+.container {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.authCard {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.authHeader {
+    margin-bottom: 30px;
+}
+
+.authIcon {
+    width: 64px;
+    height: 64px;
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.authHeader h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.authHeader p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.95rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputGroup label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0 15px;
+    transition: border-color 0.2s;
+}
+
+.inputWrapper:focus-within {
+    border-color: #3b82f6;
+}
+
+.inputWrapper input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 12px 0;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.toggleText {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.toggleText button {
+    background: none;
+    border: none;
+    color: #3b82f6;
+    font-weight: 600;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Profile View */
+.profileHeader {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 4rem;
+}
+
+.avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid rgba(59, 130, 246, 0.2);
+}
+
+.profileInfo {
+    flex: 1;
+}
+
+.profileInfo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.profileInfo p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 15px;
+}
+
+.badges {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.logoutBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.logoutBtn:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.dashCard {
+    padding: 24px;
+}
+
+.dashHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.settingsList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.settingsList li {
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.settingsList li:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #3b82f6;
+}
+
+.emptyState {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+}
+
+.usage {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.usageBar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.usageProgress {
+    height: 100%;
+    background: #10b981;
+}
+
+.usage span {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 640px) {
+    .profileHeader {
+        flex-direction: column;
+        text-align: center;
+    }
+}
